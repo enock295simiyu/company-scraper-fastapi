@@ -12,7 +12,7 @@ thread_list = []
 
 @app.get("/")
 async def company_jobs_view(company_url: str, page: int = 0):
-    print(url)
+
     url = company_url.split('?')[0]
     if url is not None and page == 0:
         data = company_jobs_scraper(url, 1)
